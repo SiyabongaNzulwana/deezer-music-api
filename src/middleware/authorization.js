@@ -1,6 +1,6 @@
-const authenticate=(req, res, next) => {
+const authorize=(req, res, next) => {
     console.log('Middleware for Authorization...')
     next()
 }
 
-module.exports = authenticate
+module.exports = authorize

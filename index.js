@@ -1,13 +1,12 @@
 const express = require('express')
 const app = express()
-const helmet = require("helmet")
+const helmet = require('helmet')
 
 const authenticate = require('./src/middleware/authentication')
 const authorize = require('./src/middleware/authorization')
 const tracks = require('./src/routes/track')
 const artist = require('./src/routes/artist')
 const albums = require('./src/routes/album')
-
 
 app.use(helmet())
 app.use(authenticate)
