@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
     if(!searchTerm) return res.status(400).send(`Please provide us with a valid string to search for.`)
 
     //assuming that Tracks is a model that exists and returns an array of tracks based on the search term from the database.
-    const tracks = await Tracks.find({ where: { searchTerm: searchTerm}})
+    const tracks = await Track.find({ where: { searchTerm: searchTerm}})
 
     if (!tracks) return res.status(404).send(`no tracks found with that search term ${searchTerm}`)
 
